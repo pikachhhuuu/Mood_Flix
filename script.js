@@ -7,8 +7,8 @@ document.getElementById("sad-btn").addEventListener("click", () => fetchMoviesBy
 document.getElementById("excited-btn").addEventListener("click", () => fetchMoviesByMood('excited'));
 document.getElementById("calm-btn").addEventListener("click", () => fetchMoviesByMood('calm'));
 document.getElementById("lonely-btn").addEventListener("click", () => fetchMoviesByMood('lonely'));
-document.getElementById("humorous-btn").addEventListener("click", () => fetchMoviesByMood('humorous'));
-document.getElementById("melancholy-btn").addEventListener("click", () => fetchMoviesByMood('melancholy'));
+document.getElementById("heartbreak-btn").addEventListener("click", () => fetchMoviesByMood('heartbreak'));
+document.getElementById("romance-btn").addEventListener("click", () => fetchMoviesByMood('romance'));
 
 async function fetchMoviesByMood(mood) {
     const genreId = getGenreIdByMood(mood);
@@ -23,17 +23,17 @@ function getGenreIdByMood(mood) {
         case 'happy':
             return 35 && 10402; // Comedy genre ID
         case 'sad':
-            return 18; // Drama genre ID
+            return 35; // humour genre ID
         case 'excited':
             return 28; // Action genre ID
         case 'calm':
             return 14; // Fantasy genre ID
         case 'lonely':  
-            return 80;  // Crime genre ID
-        case 'humorous':
-            return 35; // Comedy genre ID
-        case 'melancholy':
-            return 878; // Science Fiction genre ID
+            return 9648;  // scary genre ID
+        case 'heartbreak':
+            return 10751; // family genre ID
+        case 'romance':
+            return 10749; // Science Fiction genre ID
         default:
             return 0; // Default to no genre
     }
@@ -59,3 +59,18 @@ function displayMovies(movies) {
         recommendationsDiv.appendChild(movieDiv);
     });
 }
+$(document).ready(function() {
+    $('.popup-btn').click(function(e) {
+      $('.popup-wrap').fadeIn(500);
+      $('.popup-box').removeClass('transform-out').addClass('transform-in');
+  
+      e.preventDefault();
+    });
+  
+    $('.popup-close').click(function(e) {
+      $('.popup-wrap').fadeOut(500);
+      $('.popup-box').removeClass('transform-in').addClass('transform-out');
+  
+      e.preventDefault();
+    });
+  });

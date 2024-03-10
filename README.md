@@ -22,7 +22,7 @@ The movies will play such that it  cherishes your mood
 OR you according to your preferred mood our website will suggest a list of movies to uplift your mood and you can selct the movie which you really want to watch and by clicking the banner of the movie you are redirecting into TMDb website where you can dive into more details about the movie like cast, rating, feedbacks etc 
 Explore the recommended movies based on your mood and enjoy watching!
 
-Technologies Used
+TECHNOLOGIES USED
 
 
 HTML: Markup language used for structuring the web page.
@@ -31,7 +31,7 @@ JavaScript: Programming language used for adding interactivity and fetching data
 The Movie Database (TMDb) API: Source for fetching movie data based on mood.
 
 
-Acknowledgements
+ACKNOWLEDGEMENT
 
 
 MoodFlix uses data from The Movie Database (TMDb), but is not approved or certified by TMDb. The use of their API is governed by their terms of use.
